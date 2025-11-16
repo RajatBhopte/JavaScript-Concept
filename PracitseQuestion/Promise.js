@@ -16,3 +16,9 @@ mypromise.then((message)=>{
 }).catch((error) =>{
     console.log("This is in the catch " + error);
 })
+
+// async and await are extensions of promises
+
+async function myfunction(){
+    return "Hello";
+}   
