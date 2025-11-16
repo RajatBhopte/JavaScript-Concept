@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Exercise</title>
+  </head>
+
+  <style>
+    .highlight {
+      color: aqua;
+    }
+
+    #name {
+      transition: all 0.5s ease;
+    }
+    .colored {
+      color: white;
+      background-color: blue;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    #myBox {
+      background-color: lightblue;
+      padding: 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+    <p id="name">Hii my name is Rajat Bhopte</p>
+    <button id="Changecolor">Change Color</button>
+
+    <div id="myBox">
+      <h2>Hii I am Learning Front End Development</h2>
+      <p>today i learn various thing about DOM</p>
+      <button id="hide">Hide</button>
+    </div>
+  </body>
+
+  <script>
+    document
+      .getElementById("Changecolor")
+      .addEventListener("click", function () {
+        let hold = document.getElementById("name");
+        // hold.style.color = "red";
+        // hold.style.borderRadius = "10px"
+        // hold.style.padding = "20px"
+        // hold.style.backgroundColor = "black";
+
+        // hold.classList.add("colored");
+        hold.classList.toggle("colored");
+      });
+
+    let box = document.getElementById("myBox");
+    let button = document.getElementById("hide");
+
+    // Default state: visible
+    let isVisible = true;
+
+    button.addEventListener("click", function () {
+      if (isVisible) {
+        box.style.display = "none";
+        button.textContent = "Show Box";
+      } else {
+        box.style.display = "block";
+        button.textContent = "Hide Box";
+      }
+      isVisible = !isVisible; // toggle the flag
+    });
+  </script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Light Bulb Toggle</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial;
+    }
+    #bulb {
+      width: 150px;
+      height: auto;
+    }
+    #toggleBtn {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>💡 Light Bulb Toggle Project</h2>
+  <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb">
+  <br>
+  <button id="toggleBtn" onclick="toggleBulb()">Turn ON</button>
+
+  <script>
+    let isBulbOn = false;
+
+    function toggleBulb() {
+      const bulb = document.getElementById('bulb');
+      const button = document.getElementById('toggleBtn');
+
+      if (isBulbOn) {
+        bulb.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+        button.textContent = "Turn ON";
+        isBulbOn = false;
+      } else {
+        bulb.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+        button.textContent = "Turn OFF";
+        isBulbOn = true;
+      }
+    }
+  </script>
+
+</body>
+</html>
