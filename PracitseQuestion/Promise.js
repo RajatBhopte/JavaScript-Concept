@@ -16,3 +16,15 @@ mypromise.then((message)=>{
 }).catch((error) =>{
     console.log("This is in the catch " + error);
 })
+
+// we will see async await in the next code
+
+// async function myfunction(){
+//     return "Hello";
+// }
+// they are use to handle promise more easily
+
+function Userdata()
+{
+    
+}
